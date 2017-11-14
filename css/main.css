@@ -1,0 +1,38 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #026AA7;
+}
+
+form{
+  outline: 1px solid red;
+  width: 30%;
+  height: 70%;
+  margin-left:30%;
+  margin-top: 10%;
+}
+span{
+  outline-color: 1px solid green;
+  display: block;
+}
+span:hover{
+  background-color: red;
+}
+input{
+  background-color: yellow;
+  width: 50px;
+  height: 30px;
+}
+button {
+width: 25px;
+height: 25px;
+}
+
+a{
+  color: black;
+}
