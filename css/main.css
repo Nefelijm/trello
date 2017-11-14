@@ -11,13 +11,13 @@ body{
 
 form{
   outline: 1px solid red;
-  width: 30%;
-  height: 70%;
+  width: 300px;
+  height: 150px;
   margin-left:30%;
   margin-top: 10%;
 }
 span{
-  outline-color: 1px solid green;
+  background-color: gree;
   display: block;
 }
 span:hover{
@@ -33,6 +33,15 @@ width: 25px;
 height: 25px;
 }
 
-a{
+p{
   color: black;
+  background: gray;
+}
+
+div{
+  background-color: pink;
+  width: 180px;
+  height: 100px;
+  margin-top: 10%;
+  margin-left: 10%;
 }
