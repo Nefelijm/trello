@@ -1,55 +1,56 @@
-# TWITTER 
+# TRELLO
 
-* En este reto, vamos a replicar el newsfeed de Twitter, para ello vamos a seguir un flujo de versiones que te guiarán para enfocarte de una manera más eficiente :)
+* En este reto, vamos a replicar el tablero de Trello, para ello vamos a seguir un flujo de versiones que te guiarán en dónde enfocarte desde un inicio.
 
 ***
 
 Versión 0.0.1
-Diseñar un formulario que permita ingresar un texto y un botón para "twittear".
-Agregar un evento de click al botón o de submit al formulario.
-En el evento, obtener el texto.
-Agregar el texto al HTML.
+Se mostrará el texto "Añadir una lista ...".
+Al hacer click se debe ocultar el texto y mostrar un formulario.
+El formulario está conformado por un input y un botón para que pueda añadir tareas a tu lista.
 
 ***
 Versión 0.0.2
-No ingresar texto vacío (deshabilitar el botón de "twittear").
-Contar la cantidad de caracteres de forma regresiva.
+Al dar click en el botón de "Guardar", se mostrará un nuevo cuadro donde estará el nombre de la lista agregada.
+Mostrar un texto de "Añadir una tarea" dentro de la lista.
 
 ***
 
 Versión 0.0.3
-Si pasa los 140 caracteres, deshabilitar el botón.
-Si pasa los 120 caracteres, mostrar el contador con OTRO color.
-Si pasa los 130 caracteres, mostrar el contador con OTRO color.
-Si pasa los 140 caracteres, mostrar el contador en negativo.
-
+Al dar click en "Añadir una tarea", deberá mostrar un formulario con un textarea y un botón que diga "Añadir".
 ***
 
 Versión 0.0.4
-Al presionar enter(/n) que crezca el textarea de acuerdo al tamaño del texto.
+Poner focus al input al dar click en "Agregar nueva tarea".
+Al dar click en el botón de "Añadir", deberá aparecer el texto de la tarea debajo del título de la lista.
 
 ***
 
 Versión 0.0.5 (Extra)
-Si la cantidad de caracteres ingresados (sin dar un enter), supera al tamaño del textarea por defecto, debe de agregarse una línea más para que no aparezca el scroll. (Si en caso aplica)
+Mostrar el formulario nuevamente debajo de la última tarea añadida.
 
 ***
 
 Versión 0.0.6 (Extra)
-Agregar la hora en que se publicó el tweet. En el formato de 24 horas: hh:mm.
-
+Poder agregar múltiples listas con tarjetas. Para esto, el formulario de "Añadir una lista" debe aparecer a la derecha de la lista anteriormente creada.
 
 #OBJETIVO 
 
-Para completar este reto, hemos creado este repositorio boilerplate (plantilla
-inicial) con todos los recursos que necesitas. Esto incluye imágenes y
-estructura de carpetas y archivos donde colocarás tu código.
-
-![RECURSO](assets/img/twitter.png)
+![RECURSO](assets/img/trello.png)
 
 #SE UTILIZO
 
 *CSS
 *HTML
 *JS
+
+
+****Es importante repasar estos temas antes de comenzar :
+*CloneNode
+*Classlist.add
+*ClassList.remove
+*Innerhtml
+*Getelementsbyclassname
+*GetelementsbyId
+*Propiedades display de css
 
