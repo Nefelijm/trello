@@ -3,20 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title> Trello </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <form class="" action="index.html" method="post">
-      <span id="abrir"> Añadir una lista </span>
-
-      <div id="segundo">
-        <input type="text" name="añadir" value="">
-        <button type="button" name="button"></button>
-        <p>x</p>
+    <header>
+      <div class="icons1">
+          <i class="fa fa-trello" aria-hidden="true"> Tableros </i>  
       </div>
-
-    </form>
-    <script src="js/app.js" charset="utf-8"></script>
-
+      <div class="icons2">                  
+         <i class="fa fa-search" aria-hidden="true"> </i> 
+         <input type="text">        
+      </div>
+      <div class="title"> trello  </div>
+      <div class="icons3">        
+          <i class="fa fa-plus" aria-hidden="true"></i>      
+          <i class="fa fa-info-circle" aria-hidden="true"></i>               
+          <i class="fa fa-bell-o" aria-hidden="true"></i>        
+          <div class="user"> NEFELI JOÑORUCO </div>
+      </div>
+    </header>
+    <section>
+      <form class="form form-css" action="index.html" method="post">
+        <button class="add-list" type="button" name="button">Añadir una lista...</button>
+        <input class="tittle-list" type="text" name="" value="" placeholder="Añadir una lista...">
+        <button class="save-list" type="button" name="button">Guardar</button>
+        <span class="close-icon">
+          <i class="fa fa-times icon-x" aria-hidden="true"></i>
+        </span>
+      </form>
+      <div class="container-lists">
+    
+      </div>
+    </section>
   </body>
+  <script src="js/app.js"></script>
 </html>
