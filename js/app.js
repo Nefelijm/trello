@@ -1,39 +1,43 @@
 window.addEventListener('load', function() {
 
-  var tittleList = document.getElementsByClassName('tittle-list')[0];
-  var saveList = document.getElementsByClassName('save-list')[0];
+  //creamos variables para almacenar nuetsros elementos
+  var titulo = document.getElementsByClassName('list')[0];
+  var guardar = document.getElementsByClassName('save')[0];
   var form = document.getElementsByClassName('form')[0];
-  var spanClose = document.getElementsByClassName('close-icon')[0];
-  form.setAttribute('class', 'form-css');
-  tittleList.setAttribute('class', 'hide');
-  spanClose.setAttribute('class', 'hide');
-  saveList.setAttribute('class', 'hide');
-
-  //Creando funcion para que aparezca el form cuando hagan click
-  var addList = document.getElementsByClassName('add-list')[0];
-  addList.addEventListener('click', showForm);
-
-  function showForm() {
-    tittleList.setAttribute('class', 'show');
-    tittleList.setAttribute('class', 'input-css');
+  var cerrar = document.getElementsByClassName('close-icon')[0];
+  var one = document.getElementById('one');
+  // Agregamos clases atravez de la propiedad classList a nuestro css
+  // one.style.display = 'none'; 
+  form.classList.add('form-estilo');
+  titulo.classList.add('hide');
+  cerrar.classList.add('hide');
+  guardar.classList.add('hide');
+  // Al realizar el evento click se cargara el evento formulario
+  var agregar = document.getElementsByClassName('clic')[0];
+  agregar.addEventListener('click', formulario);
+ // agregamos clases a nuetsro css
+  function formulario() {
+    titulo.classList.add('show');
+    titulo.classList.add('input-estilo');
     form.classList.add('grow');
-    saveList.setAttribute('class', 'show');
-    spanClose.setAttribute('class', 'show');
-    spanClose.classList.add('grow');
-    saveList.setAttribute('class', 'btn-save');
-    saveList.classList.add('btn-save:hover');
-    addList.setAttribute('class', 'hide');
+    guardar.classList.add('show');
+    cerrar.classList.add('show');
+    cerrar.classList.add('grow');
+    guardar.classList.add('boton');
+    guardar.classList.add('boton:hover');
+    agregar.classList.add('hide');
   };
-
-  //Agregar lista cuando presionen el boton Guardar
-  saveList.addEventListener('click', createList);
-
-  function createList() {
+  //Agregar una lista al presionen el boton Guardar
+  guardar.addEventListener('click', crearlista);
+  //Creamos la funcion crearlista
+  function crearlista() {
     var containerLists = document.getElementsByClassName('container-lists')[0];
     var lists = document.createElement('ul');
     var li = document.createElement('li');
     var textLi = document.createElement('input');
-    textLi.setAttribute('value', tittleList.value);
+
+   //le agregamos los respectos atributos
+    textLi.setAttribute('value', titulo.value);
     textLi.setAttribute('class', 'class-textLi');
     textLi.setAttribute('type', 'text');
     textLi.classList.add('input-tittle-list');
@@ -50,11 +54,13 @@ window.addEventListener('load', function() {
     liAnchor.appendChild(addCard);
     addCard.classList.add('link');
     addCard.classList.add('link:hover');
-    tittleList.value = '';
-    tittleList.focus();
-    //Crear una tarjeta a la lista cuando le de click al link Añadir tarjeta...
-    addCard.addEventListener('click', showCard);
-    function showCard() {
+    titulo.value = '';
+    titulo.focus();
+
+    //Crear una tarjeta a la lista cuando le de click al link Añadir tarjeta   
+    addCard.addEventListener('click', mostrar);
+    //creando la funcion mostrar
+    function mostrar() {
       //Ocultar Añadir una tarjeta...
       liAnchor.setAttribute('class', 'hide');
       //Crear formulario dentro de li
@@ -74,6 +80,7 @@ window.addEventListener('load', function() {
       liCard.appendChild(options);
       //Dar focus al textarea
       card.focus();
+
       //Añadir texto a la lista
       btnAddCard.addEventListener('click', addTextLi);
       function addTextLi() {
@@ -82,10 +89,9 @@ window.addEventListener('load', function() {
         lists.appendChild(itemCard);
         lists.insertBefore(itemCard, liCard);
         itemCard.classList.add('li-item');
-        card.value = '';
+        card.value = '';        
         //Dar focus al textarea
-        card.focus();
-        
+        card.focus();        
       };
     };
   };
